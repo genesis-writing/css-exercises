@@ -1,6 +1,12 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  display: flex;
+  /* Logo is centered vertically and horizontally. */
+  /* Left-links and right-links are pushed all the way to the left and right and stay there when resized. */
+  justify-content: space-between;
+  /* Logo and list-items are centered vertically. */
+  align-items: center;
 }
 
 .logo {
@@ -9,11 +15,21 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+  /* space between all items and the edge of the header. */
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 ul {
-  /* this removes the dots on the list items*/
+  /* this removes the dots on the list items. */
   list-style-type: none;
+  /* Remove default margin/padding that you will need to deal with. */
+  margin: 0;
+  padding: 0;
+  /* Ensure list items are dislayed side by side (horizontal). */
+  display: flex;
+  /* Add spaces between list items */
+  gap: 20px;
 }
 
 a {
@@ -22,4 +38,14 @@ a {
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
+}
+
+.left-links {
+  /* space between all items and the edge of the header */
+  margin-left: 10px;
+}
+
+.right-links {
+  /* space between all items and the edge of the header */
+  margin-right: 10px;
 }
