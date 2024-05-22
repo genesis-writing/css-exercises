@@ -5,11 +5,19 @@ body {
 img {
   width: 100px;
   height: 100px;
+  display: flex;
+  /* Ensure image in each plant container is centered */
+  align-self: center;
 }
 
 .title {
   font-size: 36px;
   font-weight: 900;
+  display: flex;
+  /* The title is centered on the page. */
+  justify-content: center;
+  /* There is 32px between the title and the 'items.' */
+  margin-bottom: 32px;
 }
 
 /* do not edit this footer */
@@ -23,4 +31,26 @@ img {
   align-items: center;
   justify-content: center;
   background: #eee;
+}
+
+.all-plants {
+  display: flex;
+  /* all items are centered on the page (horizontally, not vertically) */
+  justify-content: center;
+  /* There is 52px between each item. */
+  gap: 52px;
+}
+
+.barberry-container, .chili-container, .pepper-container, .saffron-container {
+  display: flex;
+  flex-direction: column;
+  /* The items are only 200px wide */
+  flex-basis: 200px;
+}
+
+.text {
+  /* The text wraps.*/
+  text-wrap: wrap;
+  /* The item text is centered.*/
+  text-align: center;
 }
