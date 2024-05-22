@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+* {
+  /* Reset to override the user-agent stylesheet */
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +24,10 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* The buttons have an appropriate amount of padding. */
+  padding: 8px 16px;
+  /* There is space between the input and buttons. */
+  margin-top: 16px;
 }
 
 input {
@@ -23,4 +35,52 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+  /* There is space between the logo and input. */
+  margin-top: 12px;
+}
+
+ul {
+  /* Remove bullet points from all list items */
+  list-style-type: none;
+}
+
+a {
+  /* Remove underline from all hyperlinks */
+  text-decoration: none;
+  /* Update links color */
+  color: #5a6368;
+}
+
+.header {
+  display: flex;
+  /* Left and right links are distributed on either
+  side of the header */
+  justify-content: space-between;
+}
+
+.footer {
+  /* The footer has a light gray background */
+  background-color: #eeeeee;
+  display: flex;
+  /* Left and right links are distributed on either
+  side of the footer */
+  justify-content: space-between;
+  /* the footer is at the bottom, and they stay
+  in place if you resize your screen */
+  margin-top: auto;
+}
+
+.left-links ,.right-links {
+  display: flex;
+  /* The header and footer have padding. */
+  padding: 20px;
+  /* There is space between the links in the header and footer. */
+  gap: 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* The logo, input and buttons are centered in the screen. */
+  align-items: center;
 }
